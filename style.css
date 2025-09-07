@@ -537,11 +537,11 @@ background-color: rgba(255, 98, 1, 0.3);
   }
 
   .steps {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards in a row */
+    grid-template-columns: repeat(2, 1fr); 
   }
 
   .why-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards in a row */
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
@@ -554,11 +554,11 @@ background-color: rgba(255, 98, 1, 0.3);
   }
 
   .why-grid {
-    grid-template-columns: 1fr; /* 1 card in a row */
+    grid-template-columns: 1fr; 
   }
 
   .steps {
-    grid-template-columns: 1fr; /* 1 card in a row */
+    grid-template-columns: 1fr; 
   }
 
   .about-heading div {
