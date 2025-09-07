@@ -325,8 +325,8 @@ body {
 
 /* Footer */
 .footer {
-  background: linear-gradient(90deg, #FF6201 0%, #AFAFAF 100%);
-  color: #D2B48C;
+   background: linear-gradient(135deg, #bf9176, #dca889);
+  color: white;
   padding: 40px 20px;
   margin-top: 60px;
   position: relative;
@@ -346,13 +346,13 @@ body {
 .footer-container > p {
   margin: 0;
   font-size: 14px;
-  color: #D2B48C;
+  color: #fff;
   line-height: 1.6;
 }
 
 .footer-container > p strong {
   font-weight: 600;
-  color: #E6D3B7;
+  color: #FFF;
 }
 
 .footer-socials {
