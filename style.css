@@ -29,7 +29,6 @@ body {
 .hero-heading {
   font-size: 52px;
   font-weight: 700;
-  font-family: 'Poppins', sans-serif;
   line-height: 1.2;
   color: #333;
   padding-bottom: 30px;
@@ -56,7 +55,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding: 80px 60px; */
   background: linear-gradient(to right, #ffe5d1, #fff);
   max-width: 2000px;
   margin: 0 auto;
@@ -97,16 +95,8 @@ body {
 .hero-image img {
   width: 100%;
   height: 617px;
-  opacity: 1;
   max-width: 686px;
   border-radius: 10px;
-}
-
-/* ======= Fix for screens larger than 1900px ======= */
-@media (min-width: 1900px) {
-  .hero {
-    padding: 80px 0;   /* remove side spacing */
-  }
 }
 
 /* About Section */
@@ -115,13 +105,15 @@ body {
   align-items: center;
   padding: 32px 50px 20px 50px;
   gap: 40px;
+  @media (min-width: 1900px) {
+  
+  }
 }
 
 .about-text {
   flex: 1;
 }
 
-/* New About Heading Styles */
 .about-heading {
   display: flex;
   flex-direction: column;
@@ -131,7 +123,6 @@ body {
 
 .about-heading div {
   font-weight: 700;
-  font-style: normal;
   font-size: 40px;
   line-height: 56px;
   color: #333;
@@ -141,7 +132,6 @@ body {
   color: #ff6600;
 }
 
-/* Paragraph styling */
 .about-text p {
   margin-bottom: 15px;
   font-size: 16px;
@@ -173,7 +163,6 @@ body {
 
 .why-heading h2 {
   font-size: 32px;
-  margin: 0;
   line-height: 1.2;
 }
 
@@ -196,7 +185,6 @@ body {
 
 .why-card img {
   width: 100%;
-  max-width: 100%; 
   height: auto;  
   object-fit: contain;
   border-radius: 8px;
@@ -206,7 +194,6 @@ body {
 .why-card h3 {
   font-size: 20px;
   color: #333;
-  display: flex;
   margin: 30px 0 12px 17px;
 }
 
@@ -219,7 +206,6 @@ body {
 /* Process Section */
 .process {
   padding: 80px 60px;
-  font-family: Arial, sans-serif;
   color: #333;
 }
 
@@ -279,18 +265,6 @@ body {
   justify-items: center;
 }
 
-.steps > *:nth-child(5) {
-  grid-column: 1;
-}
-
-.steps .step:nth-last-child(-n+4):first-child {
-  justify-self: center; 
-}
-
-.steps {
-  justify-content: start; 
-}
-
 .step {
   background: #fff;
   border-radius: 10px;
@@ -307,10 +281,10 @@ body {
 }
 
 .step-info {
-  text-align: center;
-  align-items: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .step-number {
@@ -351,14 +325,12 @@ body {
 .footer-container {
   max-width: 1200px;
   margin: auto;
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
 .footer-container > p {
-  margin: 0;
   font-size: 14px;
   color: #fff;
   line-height: 1.6;
@@ -376,7 +348,6 @@ body {
 }
 
 .footer-socials a {
-  display: inline-block;
   transition: opacity 0.3s ease;
 }
 
@@ -394,7 +365,6 @@ body {
   position: absolute;
   right: 20px;
   bottom: 20px;
-  opacity: 1;
 }
 
 .footer-logo img {
@@ -404,11 +374,15 @@ body {
 }
 
 .about-text-content {
-  width: 100%;
   max-width: 626px;
   display: flex;
   flex-direction: column;
   gap: 15px; 
+
+
+
+
+
 }
 
 .about-text-content div {
@@ -426,18 +400,14 @@ body {
 
 .why-card-title {
   font-weight: 600;
-  font-style: normal;
   font-size: 28px;
-  line-height: 100%;
   margin-bottom: 12px;
   color: #333;
 }
 
 .why-card-text {
   font-weight: 500;
-  font-style: normal;
   font-size: 18px;
-  line-height: 100%;
   color: #666;
 }
 
@@ -463,76 +433,62 @@ body {
   color: white;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-socials {
-    justify-content: center;
-    margin-top: 15px;
-  }
-
-  .footer-logo {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    margin-top: 20px;
-  }
-
-  .footer-logo img {
-    width: 300px;
-    height: auto;
-  }
-
-  .social-icon img {
-    width: 185px;
-    height: 40px;
-  }
-}
-
 .step-number-text {
   display: flex;
-  text-align: center;
   justify-content: center;
+  text-align: center;
 }
 
 .fontstyle1 {
   font-size: 14px;
   font-weight: 700;
-  align-items: center;
   display: flex;
+  align-items: center;
   padding-left: 4px;
 }
 
 /* ========= MEDIA QUERIES ========= */
 @media (max-width: 1024px) {
   .hero {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    align-items: center;
     text-align: center;
     padding: 20px;
+    gap: 30px;
   }
 
   .hero-text {
     max-width: 100%;
+    margin: 0;
   }
 
   .hero-image img {
-    max-width: 100%;
+    max-width: 546px;
+    width: 100%;
     height: auto;
   }
 
+  .hero-text button {
+    margin-top: 20px;
+  }
+
   .about {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    align-items: center;
     text-align: center;
     padding: 20px;
+    gap: 30px;
+  }
+
+  .about-text {
+    margin: 0;
+    max-width: 100%;
   }
 
   .about-image img {
-    max-width: 100%;
+    max-width: 505px;
+    width: 100%;
+    height: auto;
   }
 
   .process-container {
@@ -562,10 +518,7 @@ body {
     align-items: center;
   }
 
-  .why-grid {
-    grid-template-columns: 1fr; 
-  }
-
+  .why-grid,
   .steps {
     grid-template-columns: 1fr; 
   }
@@ -586,18 +539,8 @@ body {
   }
 }
 
-/* @media (min-width: 1800px) {
-  .hero,
-  .about {
-    justify-content: center; 
-    gap: 80px; 
-  }
-} */
-/* 1800px tak thoda margin left do */
 @media (max-width: 1800px) {
-  .hero-text {
-    margin-left: 40px;
-  }
+  .hero-text,
   .about-text {
     margin-left: 40px;
   }
@@ -606,54 +549,24 @@ body {
 @media (min-width: 1800px) {
   .hero,
   .about {
-    justify-content: center;
     gap: 80px; 
   }
 
   .hero-text,
   .about-text {
-           max-width: 700px;
-        margin-left: 8px;
+    margin-left: 86px;
+    width: 100%;
+    max-width: 979px;
   }
 }
-@media (max-width: 1024px) {
-  .hero {
-    flex-direction: column-reverse; /* pehle text, phir image ka order */
-    align-items: center;            /* center align */
-    text-align: center;             /* text center me */
-    gap: 30px;                      /* image aur text ke beech gap */
-  }
-
-  .hero-text {
-    margin: 0; /* pehle wale margins hata do */
-  }
-
-  .hero-image img {
-    max-width: 546px; /* optional: responsive size */
-    width: 100%;
-    height: auto;
-  }
-
-  .hero-text button {
-    margin-top: 20px; /* text ke niche button ke liye spacing */
+@media (min-width: 1900px) {
+  .hide-on-large {
+    display: none; 
   }
 }
-@media (max-width: 1024px) {
-  .about {
-    flex-direction: column-reverse; /* pehle text, fir image */
-    align-items: center;
-    text-align: center;
-    gap: 30px; /* image aur text ke beech spacing */
-  }
-
-  .about-text {
-    margin: 0;
-    max-width: 100%; /* responsive */
-  }
-
-  .about-image img {
-    max-width: 505px; /* optional: responsive size */
+@media (max-width: 1900px) {
+  .about-text-content {
     width: 100%;
-    height: auto;
+    max-width: 973px;
   }
 }
