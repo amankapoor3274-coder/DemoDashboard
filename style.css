@@ -570,3 +570,179 @@ body {
     max-width: 974px;
   }
 }
+/* ================= HAMBURGER MENU ================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+}
+
+/* Hamburger animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+@media (max-width: 768px) {
+  .process-text {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  .process-subtext {
+        margin-left: 37px;
+        font-size: 12px;
+        padding-top: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .about-text-content div {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+    .hero-text, .about-text {
+        margin-left: 13px;
+    }
+}
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 32px;
+  }
+}
+@media (max-width: 768px) {
+    .hero-image img {
+        max-width: 445px;
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 768px) {
+    .buildYourFuture {
+        font-size: 22px;
+        font-weight: 600;
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+.logo img {
+    height: 37px;
+    width: 146px;
+}
+}
+
+@media (max-width: 768px) {
+footer-logo img {
+    width: 343px;
+    height: 123px;
+    object-fit: contain;
+}
+}
+
+@media (max-width: 1024px) {
+.buildYourFuture {
+    font-size: 36px;
+    font-weight: 600;
+    width: 75%;
+    margin-left: 66px;
+}}
+
+@media (max-width: 1024px) {
+.process-subtext {
+    font-size: 18px;
+    font-weight: 500;
+    width: 75%;
+    margin: auto;
+}
+}
+
+@media (max-width: 768px) {
+    .buildYourFuture {
+        font-size: 20px;
+        font-weight: 600;
+        width: 75%;
+        margin-left: 36px;
+    }
+}
+@media (max-width: 768px) {
+    .process-subtext {
+        font-size: 11px;
+        font-weight: 500;
+        width: 75%;
+        margin: auto;
+    }
+}
+@media (max-width: 768px) {
+.why-card h3 {
+    font-size: 15px;
+    color: #333;
+    margin: 30px 0 12px 17px;
+}
+}
+
+@media (max-width: 768px) {
+.why-card p {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+    margin-left: 17px;
+}
+}
+@media (max-width: 768px) {
+.footer-logo img {
+    width: 372px;
+    height: 123px;
+    object-fit: contain;
+}
+}
+
+@media (max-width: 768px) {
+.why-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    justify-content: center;
+    width: 300px;}}
