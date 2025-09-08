@@ -55,8 +55,12 @@ body {
 .hero {
   display: flex;
   align-items: center;
-  padding: 0px 2px 0 50px;
+  justify-content: space-between;
+  /* padding: 80px 60px; */
   background: linear-gradient(to right, #ffe5d1, #fff);
+  max-width: 2000px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .hero-text {
@@ -82,12 +86,12 @@ body {
   box-shadow: 0 8px 20px rgba(1, 81, 115, 0.3);
 }
 
-
 .btn:hover {
   background: #e25500;
 }
-.about-button1{
-    padding-top: 60px;
+
+.about-button1 {
+  padding-top: 60px;
 }
 
 .hero-image img {
@@ -96,6 +100,13 @@ body {
   opacity: 1;
   max-width: 686px;
   border-radius: 10px;
+}
+
+/* ======= Fix for screens larger than 1900px ======= */
+@media (min-width: 1900px) {
+  .hero {
+    padding: 80px 0;   /* remove side spacing */
+  }
 }
 
 /* About Section */
@@ -115,7 +126,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 20px; /* optional spacing */
+  margin-bottom: 20px; 
 }
 
 .about-heading div {
@@ -170,8 +181,7 @@ body {
   color: #ff6600;
 }
 
-
- .why-grid {
+.why-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
   gap: 30px;
@@ -183,15 +193,6 @@ body {
   padding: 4px 20px 0px 31px;
   border-radius: 12px;
 }
-
-
-/* .why-card img {
-    width: 100%;
-  max-width: 264px;
-  height: 287px;
-  object-fit: cover;
-  border-radius: 8px;
-} */
 
 .why-card img {
   width: 100%;
@@ -252,10 +253,10 @@ body {
   color: #ff6600;
 }
 
-.buildYourFuture{
-    font-size: 46px;
-    font-weight: 600;
-    width: 75%;
+.buildYourFuture {
+  font-size: 46px;
+  font-weight: 600;
+  width: 75%;
 }
 
 .process-text p {
@@ -263,56 +264,38 @@ body {
   line-height: 1.6;
   color: #555;
 }
-.process-subtext{
-    font-size: 18px;
-    font-weight: 500;
-    width: 75%;
+
+.process-subtext {
+  font-size: 18px;
+  font-weight: 500;
+  width: 75%;
 }
 
-/* .steps {
+.steps {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  background-color: white;
-} */
-/* .steps {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 30px;
-  background-color: white;
-  justify-items: center; 
-} */
- .steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(288px, 1fr)); /* ✅ Figma width respect karega */
+  grid-template-columns: repeat(auto-fit, minmax(288px, 1fr)); 
   gap: 30px;
   background-color: white;
   justify-items: center;
 }
 
 .steps > *:nth-child(5) {
-  grid-column: 1; /* bas column 2 me daalo, 1 hi column occupy karega */
+  grid-column: 1;
 }
-
-
-
 
 .steps .step:nth-last-child(-n+4):first-child {
   justify-self: center; 
 }
 
 .steps {
-  justify-content: start; /* default for normal rows */
+  justify-content: start; 
 }
-
 
 .step {
   background: #fff;
   border-radius: 10px;
   padding: 20px;
   text-align: center;
-  /* width: 100%;       */
-  /* max-width: 288px;   */
   box-sizing: border-box;
 }
 
@@ -324,10 +307,10 @@ body {
 }
 
 .step-info {
-    text-align: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .step-number {
@@ -352,12 +335,11 @@ body {
   line-height: 1.5;
   color: #666;
   padding-top: 16px;
-
 }
 
 /* Footer */
 .footer {
-   background: linear-gradient(135deg, #bf9176, #dca889);
+  background: linear-gradient(135deg, #bf9176, #dca889);
   color: white;
   padding: 40px 20px;
   margin-top: 60px;
@@ -420,17 +402,17 @@ body {
   height: 123px;
   object-fit: contain;
 }
+
 .about-text-content {
   width: 100%;
   max-width: 626px;
   display: flex;
   flex-direction: column;
   gap: 15px; 
-  
 }
 
 .about-text-content div {
-font-size: 20px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1.6;
   color: #333;
@@ -440,9 +422,7 @@ font-size: 20px;
   color: #ff6600; 
   font-weight: 500;
   font-size: 20px;
-
 }
-
 
 .why-card-title {
   font-weight: 600;
@@ -453,27 +433,26 @@ font-size: 20px;
   color: #333;
 }
 
-/* Why Card Text (was p) */
 .why-card-text {
   font-weight: 500;
-  font-style: normal; /* 'Medium' not valid, use font-weight 500 */
+  font-style: normal;
   font-size: 18px;
   line-height: 100%;
   color: #666;
 }
 
 .step-number-outer {
-  width: 46px;          /* outer circle size */
+  width: 46px;
   height: 45px;
-background-color: rgba(255, 98, 1, 0.3);
-  border-radius: 50%;   /* makes it a circle */
+  background-color: rgba(255, 98, 1, 0.3);
+  border-radius: 50%; 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .step-number-inner {
-  width: 38px;          /* inner circle size */
+  width: 38px;
   height: 37px;
   background-color: #FF6201;
   border-radius: 50%;
@@ -483,7 +462,6 @@ background-color: rgba(255, 98, 1, 0.3);
   font-weight: bold;
   color: white;
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -514,23 +492,23 @@ background-color: rgba(255, 98, 1, 0.3);
     width: 185px;
     height: 40px;
   }
-  
 }
-.step-number-text {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-  }
-  .fontstyle1{
-     font-size: 14px;
-    font-weight: 700;
-    align-items: center;
-    display: flex;
-    padding-left: 4px;
-  }
-  /* ========= MEDIA QUERIES ========= */
 
-/* Tablet screens (max-width 1024px) */
+.step-number-text {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.fontstyle1 {
+  font-size: 14px;
+  font-weight: 700;
+  align-items: center;
+  display: flex;
+  padding-left: 4px;
+}
+
+/* ========= MEDIA QUERIES ========= */
 @media (max-width: 1024px) {
   .hero {
     flex-direction: column;
@@ -577,7 +555,6 @@ background-color: rgba(255, 98, 1, 0.3);
   }
 }
 
-/* Mobile screens (max-width: 900px) */
 @media (max-width: 900px) {
   .navbar ul {
     flex-direction: column;
@@ -606,5 +583,77 @@ background-color: rgba(255, 98, 1, 0.3);
 
   .process-text {
     margin-left: 0;
+  }
+}
+
+/* @media (min-width: 1800px) {
+  .hero,
+  .about {
+    justify-content: center; 
+    gap: 80px; 
+  }
+} */
+/* 1800px tak thoda margin left do */
+@media (max-width: 1800px) {
+  .hero-text {
+    margin-left: 40px;
+  }
+  .about-text {
+    margin-left: 40px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .hero,
+  .about {
+    justify-content: center;
+    gap: 80px; 
+  }
+
+  .hero-text,
+  .about-text {
+           max-width: 700px;
+        margin-left: 8px;
+  }
+}
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column-reverse; /* pehle text, phir image ka order */
+    align-items: center;            /* center align */
+    text-align: center;             /* text center me */
+    gap: 30px;                      /* image aur text ke beech gap */
+  }
+
+  .hero-text {
+    margin: 0; /* pehle wale margins hata do */
+  }
+
+  .hero-image img {
+    max-width: 546px; /* optional: responsive size */
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-text button {
+    margin-top: 20px; /* text ke niche button ke liye spacing */
+  }
+}
+@media (max-width: 1024px) {
+  .about {
+    flex-direction: column-reverse; /* pehle text, fir image */
+    align-items: center;
+    text-align: center;
+    gap: 30px; /* image aur text ke beech spacing */
+  }
+
+  .about-text {
+    margin: 0;
+    max-width: 100%; /* responsive */
+  }
+
+  .about-image img {
+    max-width: 505px; /* optional: responsive size */
+    width: 100%;
+    height: auto;
   }
 }
