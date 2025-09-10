@@ -105,7 +105,7 @@ body {
 .about {
   display: flex;
   align-items: center;
-  padding: 32px 50px 20px 50px;
+  padding: 32px 50px 20px 6px;
   gap: 40px;
   @media (min-width: 1900px) {
   
@@ -152,7 +152,8 @@ body {
 
 /* WHY Section */
 .why {
-  padding: 80px 60px;
+  /* padding: 80px 60px; */
+    padding: 80px 59px 80px 44px;
   background: #f9f9f9;
 }
 
@@ -219,7 +220,7 @@ body {
 }
 /* Process Section */
 .process {
-  padding: 80px 60px;
+  padding: 80px 60px 80px 77px;
   color: #333;
 }
 
