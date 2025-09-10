@@ -152,8 +152,7 @@ body {
 
 /* WHY Section */
 .why {
-  /* padding: 80px 60px; */
-    padding: 80px 59px 80px 44px;
+    padding: 80px 59px 80px 33px;
   background: #f9f9f9;
 }
 
@@ -324,6 +323,7 @@ body {
   line-height: 1.5;
   color: #666;
   padding-top: 16px;
+  text-align: left;
 }
 /* ============Footer Section============= */
  .footer-logo{
@@ -475,9 +475,10 @@ width: 100%;
 }
 
 .step-number-text {
-  display: flex;
-  justify-content: center;
-  text-align: center;
+      width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
 }
 
 .fontstyle1 {
@@ -678,11 +679,7 @@ width: 100%;
 }
 
 
-@media (max-width: 768px) {
-    .hero-text, .about-text {
-        margin-left: 13px;
-    }
-}
+
 @media (max-width: 768px) {
   .hero-heading {
     font-size: 32px;
@@ -834,8 +831,13 @@ footer-logo img {
   @media (max-width: 1800px) {
   .hero-text,
   .about-text {
-    margin-left: 80px;
+    margin-left: 60px;
   }
+}
+@media (max-width: 768px) {
+    .hero-text, .about-text {
+        margin-left: 13px;
+    }
 }
   @media (max-width: 1024px) {
 .footer-logo img {
