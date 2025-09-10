@@ -325,14 +325,11 @@ body {
   color: #666;
   padding-top: 16px;
 }
+/* ============Footer Section============= */
+ .footer-logo{
+width: 100%;
+ }
 
-/* Footer */
-/* .footer {
-  background: linear-gradient(135deg, #c48c70, #e8a87c); 
-  color: #fff;
-  padding: 60px 100px;
-  position: relative;
-} */
  .footer {
   background: linear-gradient(135deg, #c48c70, #e8a87c); /* gradient like screenshot */
   color: #fff;
@@ -417,8 +414,6 @@ body {
 
 
 .footer-logo img {
-  width: 100%;
-  /* max-width: 400px; */
   height: auto;
   margin-top: 23px;
 }
@@ -585,12 +580,6 @@ body {
   }
 }
 
-@media (max-width: 1800px) {
-  .hero-text,
-  .about-text {
-    margin-left: 80px;
-  }
-}
 
 @media (min-width: 1800px) {
   .hero,
@@ -829,7 +818,7 @@ footer-logo img {
 }
 .footer-detailstop{
   width: 100%;
-max-width: 200px;
+/* max-width: 200px; */
 }
 
 @media (max-width: 768px) {
@@ -840,5 +829,15 @@ max-width: 200px;
   .footer-detailsOptions,
   .footer-text {
     width: 100%;
-    max-width: 900px; /* ✅ 200px ki jagah full width */
+    /* max-width: 900px;  */
   }
+  @media (max-width: 1800px) {
+  .hero-text,
+  .about-text {
+    margin-left: 80px;
+  }
+}
+  @media (max-width: 1024px) {
+.footer-logo img {
+  display: none;
+}}
